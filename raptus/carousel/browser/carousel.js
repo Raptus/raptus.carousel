@@ -20,6 +20,11 @@
   };
   
   function _initialize(o, settings) {
+    // ie 7 bugfix
+    o.find('.carouselContent li a img').each(function(){
+      $(this).parents('li').width($(this).width());
+    });
+    
     o.addClass('carouselActive');
     var left = parseInt(o.find('.carouselContent').css('padding-left'));
     var right = parseInt(o.find('.carouselContent').css('padding-right'));
