@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0b4 (unreleased)
+2.0b4 (2013-04-26)
 ------------------
 
 * Fixed the Internet Explorer 7 fix ;-)
