@@ -21,9 +21,17 @@
   
   function _initialize(o, settings) {
     // ie 7 bugfix
-    o.find('.carouselContent li a img').each(function(){
-      $(this).parents('li').width($(this).width());
-    });
+    if($.browser.msie && $.browser.version < 8)
+      o.find('.carouselContent li a img').each(function() {
+        var img = $(this);
+        var li = img.closest('li');
+        if(!img.complete)
+          img.load(function() {
+            li.width(img.width());
+          });
+        else
+          li.width(img.width());
+      });
     
     o.addClass('carouselActive');
     var left = parseInt(o.find('.carouselContent').css('padding-left'));
