@@ -13,7 +13,7 @@
 }
 
 .carousel.carouselActive .carouselContent {
-  padding:0 30px;
+  padding:0;
 }
 
 .carouselActive .next,
@@ -34,5 +34,36 @@
   border-right:none;
   border-left:&dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
+
+.carouselActive .next.mouseover,
+.carouselActive .prev.mouseover {
+  border:none;
+  background-image:none !important;
+  background:transparent;
+  width:35%;
+  pointer-events:none;
+}
+
+.carouselActive a {
+  background:black;
+}
+
+.carouselActive img {
+  -webkit-transition:opacity 0.2s ease-in-out;
+  -moz-transition:opacity 0.2s ease-in-out;
+  -ms-transition:opacity 0.2s ease-in-out;
+  -o-transition:opacity 0.2s ease-in-out;
+  transition:opacity 0.2s ease-in-out;
+}
+
+.carouselActive img:hover {
+  -khtml-opacity:1!important;
+  -moz-opacity:1!important;
+  -ms-filter: alpha(opacity=100)!important;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100)!important;
+  filter: alpha(opacity=100)!important;
+  opacity:1!important;
+}
+
 
 /* </dtml-with> */

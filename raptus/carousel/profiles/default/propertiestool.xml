@@ -5,8 +5,8 @@
       imagePrev:        '++resource++carousel-prev.gif',
       imageNext:        '++resource++carousel-next.gif',
       scrollSpeed:      50,
-      mouseControl:     false,
-      buttonControl:    true,
+      mouseControl:     true,
+      buttonControl:    false,
       buttonOffOpacity: 0.3,
       buttonOnOpacity:  0.8
     }</property>
